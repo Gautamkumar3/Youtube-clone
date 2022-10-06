@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>YouTube</title>
+
+</head>
+<body>
+    <div id="navbar">
+          <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjG4m4V8tXPd6pXLClecdfIWiY9YWjm-1kzQ&usqp=CAU" alt="logo">
+
+          <input id="query" oninput="debounceFunc(main,1000)" type="text" placeholder="Search">
+
+          <button id="btn"  onclick="searchFunc()" ><i class="fa-solid fa-2x fa-magnifying-glass"></i></button>
+          
+          <span class="mic"><i class="fa-solid fa-2x fa-microphone"></i></span>
+          <img class="square" src="https://www.ekonek.com/assets/images/compnumbers-applications.png" alt="">
+          <span class="notify"><i class="fa-solid fa-2x fa-bell"></i></span>
+          <span class="person"><i class="fa-solid fa-2x fa-user"></i></span>
+          
+        </div> 
+        
+          <div id="search_Res">
+            
+          </div>
+        
+            <div id="movies">
+
+            </div>
+          
+            <div id="side_menu">
+              <i class="fa-solid fa-album-collection"></i>
+              <h3><i class="fa-solid fa-2x fa-house"></i>Home</h3>
+              <h3><i class="fa-solid fa-2x fa-compass"></i>Explore</h3>
+              <h3><i class="fa-solid fa-2x fa-window-restore"></i>Subscriptions</h3>
+              <h3><i class="fa-solid fa-2x fa-clock-rotate-left"></i>History</h3>
+              <h3><i class="fa-solid fa-2x fa-video"></i>Your Videos</h3>
+              <h3><i class="fa-solid fa-2x fa-clock"></i>Watch later</h3>
+              <h3><i class="fa-solid fa-2x fa-thumbs-up"></i>Liked Video</h3>
+            </div>
+  
+    
+    
+</body>
+</html>
+<script src="index.js"></script>

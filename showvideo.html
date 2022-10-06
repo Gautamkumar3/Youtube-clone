@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        #show{
+            width: 80%;
+           margin: auto;
+        }
+        h3{
+           font-size: 30px;
+        }
+        #home>a{
+            font-size: 30px;
+            text-decoration: none;
+            color: yellow;
+            background-color: teal;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        #home{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="home"><a href="index.html">Home</a></div>
+    <div id="show">
+
+    </div>
+
+    
+</body>
+</html>
+
+<script>
+
+
+
+    let data=JSON.parse(localStorage.getItem("video"));
+    console.log(data)
+       let div=document.createElement("div")
+
+       let Iframe= document.createElement("iframe");
+        if(data.id.videoId==undefined){
+            Iframe.src=`https://www.youtube.com/embed/${data.id}?autoplay=1`
+        }else{
+            Iframe.src=`https://www.youtube.com/embed/${data.id.videoId}?autoplay=1`
+        }
+      
+       Iframe.setAttribute("width","100%")
+       Iframe.setAttribute("height","800")
+    //    Iframe.setAttribute("allow","accelerometer;autoplay;clipboard-write;encrypted-media; gyroscope;picture-in-picture")
+       Iframe.setAttribute("frameborder","0")
+       Iframe.setAttribute("allow","fullscreen")
+       Iframe.setAttribute("allow","autoplay")
+       
+       
+    
+
+       let title=document.createElement("h3")
+       title.innerText=data.snippet.title
+
+       div.append(Iframe,title)
+
+       document.getElementById("show").append(div)
+       
+</script>
+
+
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/4QFs62Y682g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
